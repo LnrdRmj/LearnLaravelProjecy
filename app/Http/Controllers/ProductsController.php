@@ -15,6 +15,7 @@ class ProductsController extends Controller
 
         return view('products.index', compact('title', 'description'));
 
+        
     }
 
     // Products index con with method
