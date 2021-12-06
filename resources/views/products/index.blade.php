@@ -8,6 +8,6 @@
 <body>
     <h1>Products</h1>
     <p>{{ $title }}</p>
-    
+    <p>{{ $description }}</p>
 </body>
 </html>

@@ -34,7 +34,7 @@ Route::get('/ilmeglio', function () {
 
 // Nuova Routing in laravel 8
 Route::get('/products', [ProductsController::class, 'index']);
-Route::get('/products', [ProductsController::class, 'indexWith']);
+//Route::get('/products', [ProductsController::class, 'indexWith']);
 Route::get('/products/about', [ProductsController::class, 'about']);
 //Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
