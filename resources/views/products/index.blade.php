@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Products</h1>
-    <p>{{ $title }}</p>
-    <p>{{ $description }}</p>
+    <h1>{{ $title }}</h1>
+    <h3>{{ $description }}</h3>
+
+    @foreach ($data as $product)
+        <p> {{ $product }} </p>
+    @endforeach
+
 </body>
 </html>

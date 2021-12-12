@@ -10,12 +10,21 @@ class ProductsController extends Controller
     // Products index con compact method
     function index(){
 
-        $title = "Questo è uno stupido titolo dinamico LOL!!!!!";
-        $description = "AKJHDSAKJDHAKSJHD";
+        $title = "Prodotti";
+        $description = "Lista di prodotti:";
 
-        return view('products.index', compact('title', 'description'));
+        $data = ['Mele', 'Giuseppi'];
 
+        // return view('products.index', compact('title', 'description', 'data'));
         
+        // In questo modo le variaibli possono avere nomi diversi dai label della view
+        return view('products.index', 
+                    [
+                        'title' => $title,
+                        'description' => $description,
+                        'data' => $data,
+                    ]);
+
     }
 
     // Products index con with method
