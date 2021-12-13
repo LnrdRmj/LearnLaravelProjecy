@@ -41,6 +41,10 @@ Route::get('/products/about', [ProductsController::class, 'about']);
 // Routing prima di Laravel 8 (che non funziona ora)
 //Route::get('/products', 'ProductsController@index');
 
+// In questo caso sto passadno un parametro sul link che deve essere un integer
+Route::get('/products/{id}', [ProductsController::class, 'showProduct'])
+        ->where('id', '[0-9]+');
+
 /*
 // Route to JSON(USERS)
 Route::get('/users', function () {

@@ -32,7 +32,10 @@ class ProductsController extends Controller
     function indexWith(){
     
         $title = "Questo è uno stupido titolo dinamico LOL (con with method)!!!!!";
-        return view('products.index')->with($title, 'title');
+        return view('products.index')
+                ->with('title', $title)
+                ->with('description', 'Descrizione')
+                ->with('data', ['Mele', 'Giuseppi']);
     
     }
 
@@ -40,6 +43,14 @@ class ProductsController extends Controller
 
         return "About page";
 
+    }
+
+    function showProduct($id){
+
+        $data = ['Mele', 'Giuseppi'];
+
+        return view('products.productInfo')->with('name', $data[$id] ?? 'Non ho trovato il prodotto :(');
+    
     }
 
 }
