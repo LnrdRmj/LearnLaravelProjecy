@@ -22,6 +22,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/secretHome', function () {
+    return view('secretHome');
+});
+
 // Rout to users
 Route::get('/users', function () {
     return 'Some users';
@@ -33,7 +37,7 @@ Route::get('/ilmeglio', function () {
 });
 
 // Nuova Routing in laravel 8
-Route::get('/products', [ProductsController::class, 'index']);
+Route::get('/products', [ProductsController::class, 'index'])->name('products');
 //Route::get('/products', [ProductsController::class, 'indexWith']);
 Route::get('/products/about', [ProductsController::class, 'about']);
 //Route::get('/products', 'App\Http\Controllers\ProductsController@index');

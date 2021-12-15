@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-    Questa è la home page del cabbio
+    
+    🤫 Questa è una home segreta 🤫
 
 @endsection
